@@ -8,7 +8,7 @@ body {
 }
 
 body * {
-    /*Significa que qualquer estilo que eu colocar aqui dentro vai servir para todos o selementos dentro
+    /*Significa que qualquer estilo que eu colocar aqui dentro vai servir para todos o elementos dentro
     do body*/
     box-sizing: border-box;
 }
