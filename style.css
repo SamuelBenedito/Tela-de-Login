@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+
+body {
+    margin: 0;
+    font-family: 'Noto Sans', sans-serif;
+    /*"margin" serve para tirar a borda que vem de padrão do html*/ 
+}
+
+body * {
+    /*Significa que qualquer estilo que eu colocar aqui dentro vai servir para todos o selementos dentro
+    do body*/
+    box-sizing: border-box;
+}
+.main-login{
+    width: 100vw;
+    height: 100vh;
+    background: #201b2c ;
+    display: flex;
+    /*"display: flex" faz a div main-login que e a junção de todas as outras div ficar uma do lado da outra*/
+    justify-content: center;
+    align-items: center;
+}
+
+.left-login{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.left-login-img{
+    width: 35vw;
+}
+
+.left-login > h1 {
+    font-size: 3vw;
+    color: #77ffc0
+}
+
+.right-login{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-login{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /*"flex-direction: column" serve para deixar um em baixo do outro */
+    padding: 30px 35px;
+    /*"padding:" e para determinar onde vai ficar as bordas para onde vai ficar as informações dentro*/
+    background: #2f2841;
+    border-radius: 20px;
+    /*"border-radius:" serve para tirar as bordas quadradas, determinando o px vai arredondando*/
+    box-shadow: 0px 10px 40px #00000056;
+    /*"box-shadow:" serve para a sombra na nossa card-login */
+}
+
+.card-login > h1{
+    color: #00ff88;
+    font-weight: 800;
+    /*"font-weight:" peso da fonte, uma fonte mais grossa*/ 
+    margin: 0;
+}
+
+.textfield{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+.textfield > input {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background: #514869;
+    color: #f0ffffde;
+    font-size: 12pt;
+    box-shadow: 0px 10px 40px #00000056;
+    outline: none;
+    /*"outline:" serve para quando formos selecionar o campo não ficar quadrado a volta do selecionado*/
+    box-sizing: border-box;
+}
+
+.textfield > label{
+    color: #f0ffffde;
+    margin-bottom: 10px;
+}
+
+.textfield > input::placeholder{
+    color: #f0ffff94;
+}
+
+.botao-login{
+    width: 100%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase ;
+    /*"text-transform: uppercase" para deixar tudo em em maiusculo*/
+    font-weight: 800;
+    letter-spacing: 3px;
+    /*"letter-spacing" da espaçamento nas letras*/
+    color: #2b134b;
+    background: #00ff88;
+    cursor: pointer;
+    /*"cursor: pointer" da a ação para o botão ficar mostrando que da pra clickar, aparece a mão*/
+    box-shadow: 0px 10px 40px -12px #00ff8052;
+}
+
+/*estamos dizendo ao css que enquanto for na tela uma largura de 950px adicionar os elementos que esta adicionando*/
+/*isso e para deixar o site bonito para aparelhos menores, celular, tablet etc..*/
+@media only screen and (max-width: 950px){
+    .card-login{
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .main-login{
+        flex-direction: column;
+    }
+    .left-login >h1{
+        display: none;
+    }
+    .left-login{
+        width: 100%;
+        height: auto;
+    }
+    .right-login{
+        width: 100%;
+        height: auto;
+    }
+    .left-login-img{
+        width: 50vw;
+    }
+    .card-login{
+        width: 90%;
+    }
+}
